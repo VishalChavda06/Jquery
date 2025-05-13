@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+        height: 100vh;
+        color: #ffffff;
+    }
+
+    .container {
+        width: 900px;
+        margin: 50px auto;
+        background-color: rgba(255, 255, 255, 0.05);
+        padding: 40px 50px;
+        border-radius: 15px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        text-align: center;
+        min-width: 300px;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    h2 {
+        font-size: 26px;
+        margin-bottom: 30px;
+        color: #ffffff;
+        letter-spacing: 1px;
+        text-align: center;
+        margin-top: 50px;
+
+    }
+
+    .time {
+        display: flex;
+        width: 150px;
+        justify-content: space-around;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 10px;
+        padding: 12px 20px;
+        margin: 10px 0;
+        font-size: 18px;
+        transition: background-color 0.3s ease;
+    }
+
+    .time:hover {
+        background-color: rgba(255, 255, 255, 0.12);
+    }
+
+    .time span:first-child {
+        font-weight: 500;
+        color: #ccc;
+    }
+
+    .time span:last-child {
+        font-weight: bold;
+        color: #00ffcc;
+        font-size: 20px;
+    }
+</style>
+
+<body>
+    <h2>This is Current Time.</h2>
+    <div class="container">
+        <div class="time">
+            <span>Horus :</span>
+            <span id="hours">00</span>
+        </div>
+        <div class="time">
+            <span>Min :</span>
+            <span id="min"> 00</span>
+        </div>
+        <div class="time">
+            <span>Second :</span>
+            <span id="sec">00</span>
+        </div>
+        <div class="time">
+            <span>Period :</span>
+            <span id="period">AM</span>
+        </div>
+    </div>
+</body>
+<script src="/jQuery/jquery.js"></script>
+<script>
+    $(document).ready(function () {
+        function showTime() {
+            // To Get current time/date
+            let date = new Date();
+
+            //Make Variables to get hours, minute, and second
+            let hours = date.getHours();
+            let min = date.getMinutes();
+            let sec = date.getSeconds();
+
+            // AM, PM Setting
+            var session = "AM";
+
+            // Conditions for time behavior
+            if (hours == 0) {
+                hours = 12;
+            }
+
+            if (hours >= 12) {
+                session = "PM";
+            }
+
+            if (hours > 12) {
+                hours = hours - 12;
+            }
+
+            hours = hours < 10 ? "0" + hours : hours;
+            min = min < 10 ? "0" + min : min;
+            sec = sec < 10 ? "0" + sec : sec;
+
+            // Set the variable to span
+
+            $("#hours").text(hours);
+            $("#min").text(min);
+            $("#sec").text(sec);
+            $("#period").text(session);
+
+            // To change time in every seconds
+            setTimeout(showTime, 1000);
+        }
+        showTime();
+    });
+
+</script>
+
+</html>

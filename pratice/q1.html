@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login Form</title>
+</head>
+
+<body>
+
+    <h2>Login Form</h2>
+
+    <form>
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username"><br><br>
+
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password">
+        <button type="button" onclick="togglePassword()">Show</button><br><br>
+
+        <input type="submit" value="Login">
+    </form>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    
+    const togglePassword = () => {
+        const $hidebtn = $("#password");
+        const $toggle = $(event.target);
+
+        if ($hidebtn.attr("type") === "password") {
+            $hidebtn.attr("type", "text");
+            $toggle.text("Hide");
+        } else {
+            $hidebtn.attr("type", "password");
+            $toggle.text("Show");
+        }
+    };
+
+
+</script>
+
+</html>

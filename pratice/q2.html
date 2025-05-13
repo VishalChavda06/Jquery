@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: #fff;
+        color: black;
+        transition: background-color 0.3s, color 0.3s;
+    }
+</style>
+
+<body>
+    <button id="toggleBtn">Toggle Change</button>
+</body>
+<script src="/jQuery/jquery.js"></script>
+<script>
+
+    $('#toggleBtn').click(function () {
+        var currentColor = $('body').css('background-color');
+        if (currentColor === 'rgb(255, 255, 255)') { // White
+            $('body').css({ 'background-color': 'black', 'color': 'white' });
+        } else {
+            $('body').css({ 'background-color': 'white', 'color': 'black' });
+        }
+    });
+
+</script>
+
+</html>

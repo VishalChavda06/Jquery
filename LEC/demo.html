@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login Form</title>
+</head>
+
+<body>
+
+    <h2>Login Form</h2>
+
+    <form>
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username"><br><br>
+
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password">
+        <button type="button" onclick="togglePassword()">Show</button><br><br>
+
+        <input type="submit" value="Login">
+    </form>
+
+    <script>
+        const togglePassword = () => {
+            const hidebtn = document.getElementById("password");
+
+            const Toggle = event.target;
+            if (hidebtn.type === "password") {
+                hidebtn.type = "text";
+                Toggle.innerHTML = "Hide"
+            }
+            else {
+                hidebtn.type = "password";
+                Toggle.innerHTML = "Show"
+            }
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>
