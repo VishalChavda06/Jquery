@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box {
+        border: 2px solid black;
+        width: 150px;
+        height: 150px;
+        text-align: center;
+        padding-top: 10px;
+        margin-top: 10px;
+        background-color: blueviolet;
+        color: white;
+        font-size: 1.2rem;
+        border-radius: 4%;
+    }
+
+    button {
+        padding: 10px 18px;
+        margin: 6px;
+        font-size: 15px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #fff;
+        background-color: #3498db;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    button:hover {
+        background-color: #2980b9;
+        transform: scale(1.05);
+    }
+
+    button:active {
+        background-color: #1f618d;
+        transform: scale(0.98);
+    }
+</style>
+
+<body>
+    <!-- FadeEfect buttons -->
+    <button id="FadeIn">FadeIn</button>
+    <button id="FadeOut">FadeOut</button> <button id="FadeOut-callBack">FadeOut-callBack</button>
+    <button id="FadeToggle">FadeToggle</button>
+    <button id="FadeTo">FadeTo</button>
+    <button id="FadeTo-callBack">FadeTo-callBack </button>
+    <!-- SlideEfect buttons -->
+    <button id="slideUp">slideUp</button>
+    <button id="slideToggle">slideToggle</button>
+    <button id="slideDown">slideDown</button>
+    <!-- Animate buttons -->
+    <button id="Aniamte">Animate</button>
+    <button id="Animate-Reset">Animate-Reset</button>
+
+    <!-- content -->
+    <div class="box1 box">box-1</div>
+    <div class="box2 box">box-2</div>
+    <div class="box3 box">box-3</div>
+    <div class="box4 box">box-4</div>
+</body>
+<script src="/jQuery/jquery.js"></script>
+<script src="./index.js"></script>
+
+</html>
