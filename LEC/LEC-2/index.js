@@ -102,7 +102,7 @@ $(() => {
 
 $(() => {
     $("#Aniamte").click(() => {
-        $(".box").animate({ borderRadius: "100px" });
+        $(".box").animate({ borderRadius: "500px" });
     })
 })
 
@@ -111,3 +111,19 @@ $(() => {
         $(".box").animate({ borderRadius: "4%" });
     })
 })
+
+// jQuery Get Method=>
+
+$("#html").click(() => { alert($('#heading').html()) })
+// that are include are any tag (html tag are include)
+
+
+// text Method =>
+
+$("#text").click(() => { alert($('#heading-text').text()) })
+
+// that are not include any tag (not a html tag include)
+
+// value Method =>
+
+$("#value").click(() => { alert($('input').val()) })
