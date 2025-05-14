@@ -127,3 +127,8 @@ $("#text").click(() => { alert($('#heading-text').text()) })
 // value Method =>
 
 $("#value").click(() => { alert($('input').val()) })
+// stop Event =>
+
+$("#Stop").click(() => {
+    $(".box").stop()
+})
